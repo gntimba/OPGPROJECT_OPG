@@ -1,0 +1,163 @@
+﻿@model OPGPROJECT_OPG.Models.Child
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .dl-horizontal dt {
+        text-align: left;
+    }
+</style>
+
+<h2>Details</h2>
+
+<div>
+    <h4>Child</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Surname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Surname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfBirth)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <button class="btn btn-sm btn-default">@Html.ActionLink("Edit", "Edit", new { id = Model.ID })</button>  |
+    <button class="btn btn-sm btn-default">@Html.ActionLink("Back to List", "Index")</button>
+    @Html.ActionLink("Emergency", "Create", "Emails", null, new { @class = "btn btn-sm btn-danger" })
+
+</p>
+
+<br />
+<h4>Family Members</h4>
+<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Surname
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            Cellphone
+        </th>
+        <th>
+            Gender
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.FamilyMembers)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Surname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cellphone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", "FamilyMembers", new { id = item.ID }, new { @class = "btn btn-sm btn-default" }) |
+                @Html.ActionLink("Details", "Details", "FamilyMembers", new { id = item.ID }, new { @class = "btn btn-sm btn-primary " }) |
+                @Html.ActionLink("Delete", "Delete", "FamilyMembers", new { id = item.ID }, new { @class = "btn btn-sm btn-danger" })
+            </td>
+        </tr>
+    }
+</table>
+<br />
+<h4>Reports</h4>
+<table class="table">
+    <tr>
+        <th>
+            Month
+        </th>
+        <th>
+            Self Management
+        </th>
+        <th>
+            Self Awareness
+        </th>
+        <th>
+            Social Awareness
+        </th>
+        <th>
+            Relationship Skills
+        </th>
+        <th>
+            Responsible Decision Making
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.Reports)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Month)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SelfManagement)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SelfAwareness)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SocialAwareness)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RelationshipSkills)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ResponsibleDecisionMaking)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", "Reports", new { id = item.ID }, new { @class = "btn btn-sm btn-default" }) |
+            @Html.ActionLink("Details", "Details", "Reports", new { id = item.ID }, new { @class = "btn btn-sm btn-primary " }) |
+            @Html.ActionLink("Delete", "Delete", "Reports", new { id = item.ID }, new { @class = "btn btn-sm btn-danger" })
+        </td>
+    </tr>
+    }
+
+</table>

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<OPGPROJECT_OPG.Models.Child>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center">Children</h2>
+
+<p>
+        @Html.ActionLink("Create New", "Create",null, new { @class = "btn btn-sm btn-default" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Surname
+        </th>
+        <th>
+            Gender
+        </th>
+        <th>
+            Date Of Birth
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Surname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfBirth)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "btn btn-sm btn-default" }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "btn btn-sm btn-primary " }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class = "btn btn-sm btn-danger" })
+        </td>
+    </tr>
+}
+</table>
