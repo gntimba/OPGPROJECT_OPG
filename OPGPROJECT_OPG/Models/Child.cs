@@ -14,11 +14,11 @@ namespace OPGPROJECT_OPG.Models
     public class Child
     {
         public int ID { get; set; }
+        public int? userID { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public Gender Gender { get; set; }
         public DateTime DateOfBirth { get; set; }
-
         public List<Report> Reports { get; set; }
         public List<FamilyMember> FamilyMembers { get; set; }
     }

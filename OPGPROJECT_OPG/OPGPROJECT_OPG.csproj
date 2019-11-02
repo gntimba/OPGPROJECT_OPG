@@ -189,6 +189,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AttendancesController.cs" />
     <Compile Include="Controllers\ChildrenController.cs" />
@@ -209,6 +210,10 @@
     <Compile Include="Migrations\201910220723092_add-modals.cs" />
     <Compile Include="Migrations\201910220723092_add-modals.Designer.cs">
       <DependentUpon>201910220723092_add-modals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911021551471_lvel2.cs" />
+    <Compile Include="Migrations\201911021551471_lvel2.Designer.cs">
+      <DependentUpon>201911021551471_lvel2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Attendance.cs" />
@@ -319,6 +324,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910220723092_add-modals.resx">
       <DependentUpon>201910220723092_add-modals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911021551471_lvel2.resx">
+      <DependentUpon>201911021551471_lvel2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

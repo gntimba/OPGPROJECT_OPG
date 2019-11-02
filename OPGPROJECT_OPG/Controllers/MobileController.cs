@@ -12,9 +12,9 @@ namespace OPGPROJECT_OPG.Controllers
     {
         private Context db = new Context();
         // GET api/<controller>
-        public IEnumerable<string> Get()
+        public IEnumerable<Child> Get()
         {
-            return new string[] { "value1", "value2" };
+            return db.Children.ToList();
         }
 
         // GET api/<controller>/5
