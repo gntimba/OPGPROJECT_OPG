@@ -370,7 +370,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>62941</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://192.168.8.101:62941/</IISUrl>
+          <IISUrl>http://localhost:62941/</IISUrl>
           <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
           <IISAppRootUrl>http://localhost:62941/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
