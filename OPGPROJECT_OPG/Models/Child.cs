@@ -18,6 +18,7 @@ namespace OPGPROJECT_OPG.Models
         public string Name { get; set; }
         public string Surname { get; set; }
         public Gender Gender { get; set; }
+        public String imageUrl { get; set; }
         public DateTime DateOfBirth { get; set; }
         public List<Report> Reports { get; set; }
         public List<FamilyMember> FamilyMembers { get; set; }

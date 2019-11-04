@@ -215,6 +215,10 @@
     <Compile Include="Migrations\201911021551471_lvel2.Designer.cs">
       <DependentUpon>201911021551471_lvel2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201911031706091_imageurl.cs" />
+    <Compile Include="Migrations\201911031706091_imageurl.Designer.cs">
+      <DependentUpon>201911031706091_imageurl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Attendance.cs" />
     <Compile Include="Models\Child.cs" />
@@ -328,6 +332,9 @@
     <EmbeddedResource Include="Migrations\201911021551471_lvel2.resx">
       <DependentUpon>201911021551471_lvel2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911031706091_imageurl.resx">
+      <DependentUpon>201911031706091_imageurl.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -341,6 +348,9 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -360,7 +370,9 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>62941</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:62941/</IISUrl>
+          <IISUrl>http://192.168.8.101:62941/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:62941/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
